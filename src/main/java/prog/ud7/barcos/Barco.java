@@ -9,11 +9,11 @@ package prog.ud7.barcos;
  * @author Ana Carbonell Prieto
  */
 public class Barco {
-    private String nombre;
-    private String matrícula;
-    private int añoConstruccion;
-    //private Data fechaAdquisicion;
-    private int horasMantenimiento;
+    protected String nombre;
+    protected String matrícula;
+    protected int añoConstruccion;
+    //protected Data fechaAdquisicion;
+    protected int horasMantenimiento;
 
     public Barco(String nombre, String matrícula, int añoConstruccion) {
         this.nombre = nombre;
@@ -31,7 +31,7 @@ public class Barco {
         );
     }
     
-    private void realizarMantenimiento() {
+    public void realizarMantenimiento() {
         this.horasMantenimiento += 100;
     }
 }
