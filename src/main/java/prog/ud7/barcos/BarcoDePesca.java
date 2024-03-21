@@ -15,8 +15,8 @@ public class BarcoDePesca extends Barco {
     private Red[] redes;
     private int porcentajeCapturas;
 
-    public BarcoDePesca(int capacidad, int capturas, String nombre, String matrícula, int añoConstruccion) {
-        super(nombre, matrícula, añoConstruccion);
+    public BarcoDePesca(int capacidad, int capturas, String nombre, String matrícula, int anyoConstruccion) {
+        super(nombre, matrícula, anyoConstruccion);
         this.capacidadCarga = capacidad;
         this.redes = new Red[0];
         this.porcentajeCapturas = capturas;
@@ -39,10 +39,9 @@ public class BarcoDePesca extends Barco {
 
     @Override
     public String toString() {
-        return String.format(
-                "Tipo de barco:  BARCO DE PESCA, nombre: %s, matrícula: %s, año de construcción: %d, horas de mantenimiento: %d, redes: %s, porcentaje de éxito en captura: %d%",
-                super.nombre, super.matrícula, super.añoConstruccion, super.horasMantenimiento, Arrays.toString(this.redes), this.porcentajeCapturas
-        );
+        return String.format("Tipo de barco:  BARCO DE PESCA, nombre: %s, matrícula: %s, año de construcción: %d, horas de mantenimiento: %d, redes: %s, porcentaje de éxito en captura: %d",
+                super.nombre, super.matrícula, super.anyoConstruccion, super.horasMantenimiento, Arrays.toString(this.redes), this.porcentajeCapturas
+        ) + '%';
     }
 
     @Override

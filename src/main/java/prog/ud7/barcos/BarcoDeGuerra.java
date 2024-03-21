@@ -15,8 +15,8 @@ public class BarcoDeGuerra extends Barco {
     private int maxTripulacion;
     private int numTripulacion;
 
-    public BarcoDeGuerra(String[] armamento, int maxTripulacion, int numTripulacion, String nombre, String matrícula, int añoConstruccion) {
-        super(nombre, matrícula, añoConstruccion);
+    public BarcoDeGuerra(String[] armamento, int maxTripulacion, int numTripulacion, String nombre, String matrícula, int anyoConstruccion) {
+        super(nombre, matrícula, anyoConstruccion);
         
         this.armamento = new String[0];
         anyadirArmamento(armamento);
@@ -51,9 +51,8 @@ public class BarcoDeGuerra extends Barco {
 
     @Override
     public String toString() {
-        return String.format(
-                "Tipo de barco: BARCO DE GUERRA, nombre: %s, matrícula: %s, año de construcción: %d, horas de mantenimiento: %d, armas a bordo: %s, número de tripulantes: %d",
-                super.nombre, super.matrícula, super.añoConstruccion, super.horasMantenimiento, Arrays.toString(armamento), this.numTripulacion
+        return String.format("Tipo de barco: BARCO DE GUERRA, nombre: %s, matrícula: %s, año de construcción: %d, horas de mantenimiento: %d, armas a bordo: %s, número de tripulantes: %d",
+                super.nombre, super.matrícula, super.anyoConstruccion, super.horasMantenimiento, Arrays.toString(armamento), this.numTripulacion
         );
     }
     

@@ -26,59 +26,8 @@ public class Red {
     @Override
     public String toString() {
         return String.format(
-                "tamano: %s, material: %s, tipo de pesca: %s",
-                this.tamanyo.toString(), this.material.toString(), this.tipoPesca.toString()
+                "Red de tamaño %s hecha de %s para pesca %s",
+                this.tamanyo, this.material, this.tipoPesca
         );
-    }
-}
-
-enum TamanyoRed {
-    PEQUENYA("pequeña"),
-    MEDIANA("mediana"),
-    GRANDE("grande");
-    
-    private String tamanyo;
-    
-    TamanyoRed(String tamanyo) {
-        this.tamanyo = tamanyo;
-    }
-
-    @Override
-    public String toString() {
-        return this.tamanyo;
-    }
-}
-
-enum MaterialRed {
-    POLIAMIDA("poliamida"),
-    POLIESTER("poliéster"),
-    POLIETILENO("polietileno");
-    
-    private String material;
-    
-    MaterialRed(String material) {
-        this.material = material;
-    }
-
-    @Override
-    public String toString() {
-        return this.material;
-    }
-}
-
-enum TipoPesca {
-    SPINNING("spinning"),
-    SUBMARNA("submarina"),
-    CARPFISHING("carpfishing");
-    
-    private String tipo;
-    
-    TipoPesca(String tipo) {
-        this.tipo = tipo;
-    }
-
-    @Override
-    public String toString() {
-        return this.tipo;
     }
 }
