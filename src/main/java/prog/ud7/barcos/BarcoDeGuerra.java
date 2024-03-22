@@ -19,7 +19,9 @@ public class BarcoDeGuerra extends Barco {
         super(nombre, matrícula, anyoConstruccion);
         
         this.armamento = new String[0];
-        anyadirArmamento(armamento);
+        if (armamento.length == 2 || armamento.length == 3) {
+            anyadirArmamento(armamento);
+        }
         
         this.maxTripulacion = maxTripulacion;
         this.numTripulacion = comprobarNumTripulacion(numTripulacion);

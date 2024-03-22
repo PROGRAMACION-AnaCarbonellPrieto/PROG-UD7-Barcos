@@ -30,8 +30,8 @@ public class TestBarcos {
         );
         
         Barco barco = new Barco("La molinera", "XXXX", 2005);
-        String[] armas = {"Lanza torpedos"};
-        BarcoDeGuerra barcoDeGuerra = new BarcoDeGuerra(armas, 10, 0, "Arrasator", "YYYYY", 2017);
+        String[] armas = {"Lanza torpedos", "Lanza torpedos"};
+        BarcoDeGuerra barcoDeGuerra = new BarcoDeGuerra(armas, 0, 10, "Arrasator", "YYYYY", 2017);
         BarcoDePesca barcoDePesca = new BarcoDePesca(20, 40, "Faenero", "ZZZZZ", 2001);
         
         System.out.println(barco);
@@ -84,24 +84,13 @@ public class TestBarcos {
         System.out.println(
                 """
                 
-                ---- Aumenta en 15 la tripulacion del barco de guerra con un máximo de 10
-                tripulantes, posteriormente aumenta la tripulacion máxima en 10 y el número
-                de tripulantes en 5 ----
+                ---- Aumenta en 15 la tripulacion máxima y en 10 la tripulación actual del
+                barco de guerra ----
                 """
         );
         
-        /*
-        Como la tripulación máxima es de 10 y empezamos con un número de 0 tripulante el
-        resultado ha de ser 10 tripulantes.
-        */
-        barcoDeGuerra.aumentarTripulantes(15);
-        System.out.println(barcoDeGuerra);
-        
-        /*
-        El máximo pasa a ser de 20 y la tripulación a 15.
-        */
-        barcoDeGuerra.aumentarMaximoDeTripulantes(10);
-        barcoDeGuerra.aumentarTripulantes(5);
+        barcoDeGuerra.aumentarMaximoDeTripulantes(15);
+        barcoDeGuerra.aumentarTripulantes(10);
         System.out.println(barcoDeGuerra);
     }
 }
