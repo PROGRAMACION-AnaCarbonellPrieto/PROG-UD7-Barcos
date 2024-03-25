@@ -12,8 +12,12 @@ import java.util.Arrays;
  */
 public class Flota {
     private Barco[] barcos;
+
+    public Flota() {
+        this.barcos = new Barco[0];
+    }
     
-    public void anyadirBarcos(Barco barco) {
+    public void anyadirBarco(Barco barco) {
         if (!existeBarco(barco)) {
             int tamanyo = this.barcos.length;
 
@@ -94,7 +98,10 @@ public class Flota {
         String flota = "";
         
         for (int i = 0; i < this.barcos.length; i++) {
-            flota += String.format("%d) %s\n", i + 1, this.barcos[i]);
+            flota += String.format("%d) %s", i + 1, this.barcos[i]);
+            if (i != this.barcos.length - 1) {
+                flota += "\n";
+            }
         }
         
         return flota;
