@@ -29,12 +29,12 @@ public class TestBarcos {
                 """
         );
         
-        Barco barco = new Barco("La molinera", "XXXX", 2005);
+        //Barco barco = new Barco("La molinera", "XXXX", 2005);
         String[] armas = {"Lanza torpedos", "Lanza torpedos"};
         BarcoDeGuerra barcoDeGuerra = new BarcoDeGuerra(armas, 0, 10, "Arrasator", "YYYYY", 2017);
         BarcoDePesca barcoDePesca = new BarcoDePesca(20, 40, "Faenero", "ZZZZZ", 2001);
         
-        System.out.println(barco);
+        //System.out.println(barco);
         System.out.println(barcoDeGuerra);
         System.out.println(barcoDePesca);
         
@@ -47,12 +47,12 @@ public class TestBarcos {
                 """
         );
         
-        barco.realizarMantenimiento();
+        //barco.realizarMantenimiento();
         barcoDeGuerra.realizarMantenimiento();
         barcoDePesca.realizarMantenimiento();
         barcoDePesca.realizarMantenimiento();
         
-        System.out.println(barco);
+        //System.out.println(barco);
         System.out.println(barcoDeGuerra);
         System.out.println(barcoDePesca);
         

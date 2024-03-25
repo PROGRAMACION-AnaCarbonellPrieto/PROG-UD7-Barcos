@@ -11,7 +11,7 @@ import prog.u6.data.Data;
  *
  * @author Ana Carbonell Prieto
  */
-public class Barco {
+public abstract class Barco {
     protected String nombre;
     protected String matrícula;
     protected int anyoConstruccion;
@@ -38,5 +38,15 @@ public class Barco {
     
     public void realizarMantenimiento() {
         this.horasMantenimiento += 100;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        
+        Barco barco = (Barco) obj;
+        return this.matrícula.equals(barco.matrícula);
     }
 }
